@@ -1,0 +1,2 @@
+module Forms::ExamplesHelper
+end

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <script src="bundle.js" async></script>
+</head>
+
+<body>
+  <h1 data-controller="example"></h1>
+
+  <div class="cards">
+    <div class="card">
+      <h1>Hello Controller</h1>
+      <div data-controller="hello">
+        <input data-hello-target="name" type="text">
+        <button data-action="click->hello#greet">Greet</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>Copy to Clipboard</h1>
+      <!-- 
+        <div data-controller="clipboard">
+          PIN: <input data-clipboard-target="source" type="text" value="1234" readonly>
+          <button data-action="clipboard#copy">Copy to Clipboard</button>
+        </div>
+        <div data-controller="clipboard">
+          PIN: <input data-clipboard-target="source" type="text" value="3737" readonly>
+          <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
+        </div> 
+      -->
+      <div data-controller="clipboard" data-clipboard-supported-class="clipboard--supported">
+        PIN: <textarea data-clipboard-target="source" readonly>37sdsd37</textarea>
+        <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>Slideshow</h1>
+      <div data-controller="slideshow" data-slideshow-index-value="1">
+        <button data-action="slideshow#previous"> ← </button>
+        <button data-action="slideshow#next"> → </button>
+        <div data-slideshow-target="slide">🐵</div>
+        <div data-slideshow-target="slide">🙈</div>
+        <div data-slideshow-target="slide">🙉</div>
+        <div data-slideshow-target="slide">🙊</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h1>External Resources</h1>
+      <!-- <div data-controller="content-loader" data-content-loader-url-value="/messages.html" data-content-loader-refresh-interval-value="5000"></div> -->
+      <div data-controller="content-loader">
+        <a href="#" data-content-loader-url-param="/messages.html" data-action="content-loader#load">Messages</a>
+        <a href="#" data-content-loader-url-param="/comments.html" data-action="content-loader#load">Comments</a>
+      </div>
+      <!-- End  -->
+    </div>
+  </div>
+
+</body>
+
+</html>
