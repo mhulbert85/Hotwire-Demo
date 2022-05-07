@@ -26,3 +26,9 @@
 <%= turbo_frame_tag 'back' do %>
   <%= link_to 'Render Turbo Frame with Back Link', 'turbo_frames/new'  %>
 <% end %>
+<br>
+<h3>Render a turbo frame from the outside</h3>
+<%= link_to 'render by turbo frame data attribute', 'turbo_frames/new', data: {turbo_frame: 'outside'} %>
+<%= turbo_frame_tag "outside" do %>
+  <p>Render turbo frame with link from the outside</p>
+<% end %>

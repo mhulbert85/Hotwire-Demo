@@ -49,3 +49,7 @@
   <%= link_to 'Back', '/' %>
   <p>turbo frame with back link</p>
 <% end %>
+<!-- Render from the putside -->
+<%= turbo_frame_tag 'outside' do %>
+  <p>turbo frame rendered by a link with data attributes e.g. <code>data-turbo-frame:'your-frame-id'</code></p>
+<% end %>
