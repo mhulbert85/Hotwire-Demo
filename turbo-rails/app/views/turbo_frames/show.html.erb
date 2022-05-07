@@ -2,8 +2,24 @@
   <p>The show view inner turbo frame</p>
   <%= link_to 'Replace with orginal content', 'turbo_frames/new' %>
 <% end %>
-
-<%= turbo_frame_tag "other" do %>
-  <p>The show view other turbo frame</p>
-  <%= link_to 'Replace with orginal content', 'turbo_frames' %>
+<!-- Rendered from the outside child elements-->
+<%= turbo_frame_tag "frame_1_child" do %>
+  <div class="ratio ratio-1x1">
+    <p>First Child</p>
+  </div>
+<% end %>
+<%= turbo_frame_tag "frame_2_child" do %>
+  <div class="ratio ratio-1x1">
+    <p>Second Child</p>
+  </div>
+<% end %>
+<%= turbo_frame_tag "frame_3_child" do %>
+  <div class="ratio ratio-1x1">
+    <p>Third Child</p>
+  </div>
+<% end %>
+<%= turbo_frame_tag "frame_4_child" do %>
+  <div class="ratio ratio-1x1">
+    <p>Fourth Child</p>
+  </div>
 <% end %>
