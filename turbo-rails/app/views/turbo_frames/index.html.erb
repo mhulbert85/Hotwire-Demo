@@ -1,28 +1,12 @@
-<h1 class="mb-5">Simple Turbo Frame Examples</h1>
-<h3>Render a turbo frame by id and path</h3>
-<%= turbo_frame_tag "my_turbo_frame", src: 'turbo_frames/new' %>
-<br>
-<h3>Render multiple turbo frames from the same path</h3>
-<div class="d-flex  gap-2">
-  <%= turbo_frame_tag "first", src: 'turbo_frames/new', class:"w-25" %>
-  <%= turbo_frame_tag "second", src: 'turbo_frames/new', class:"w-25" %>
-  <%= turbo_frame_tag "third", src: 'turbo_frames/new', class:"w-25" %>
-  <%= turbo_frame_tag "fourth", src: 'turbo_frames/new', class:"w-25" %>
-  <%= turbo_frame_tag "fifth", src: 'turbo_frames/new', class:"w-25" %>
-  <%= turbo_frame_tag "sixth", src: 'turbo_frames/new', class:"w-25" %>
-</div>
-<br>
-<h3>Render Turbo Frame By Link</h3>
-<%= turbo_frame_tag 'link' do %>
-  <%= link_to 'Render Turbo Frame By Link', 'turbo_frames/new'  %>
+<h1 class="mb-5">Turbo Frame Examples</h1>
+<h3>Render a turbo frame inside a turbo frame</h3>
+<%= turbo_frame_tag "outer", src:"turbo_frames/new" do %>
+  <p>Index view contents</p>
+  <%= link_to 'Render by id outer', 'turbo_frames/new' %>
 <% end %>
 <br>
-<h3>Render Turbo Frame By Button</h3>
-<%= turbo_frame_tag 'button' do %>
-  <%= button_to 'Render Turbo Frame By Button', 'turbo_frames/new',  method: :get %>
-<% end %>
-<br>
-<h3>Render Turbo Frame with Back Link</h3>
-<%= turbo_frame_tag 'back' do %>
-  <%= link_to 'Render Turbo Frame with Back Link', 'turbo_frames/new'  %>
+<h3>Render a turbo frame from the outside</h3>
+<%= link_to 'render by turbo frame data attribute', 'turbo_frames/show', data: {turbo_frame: 'other'} %>
+<%= turbo_frame_tag "other" do %>
+  <p>Render turbo frame with link from the outside</p>
 <% end %>

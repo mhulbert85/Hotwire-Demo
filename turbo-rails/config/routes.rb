@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   root 'turbo_frames#index'
 
-  resources :turbo_frames, only: %i[index new]
+  resources :turbo_frames, only: %i[index new show]
 
   resources :rooms do
     resources :messages

@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "inner" do %>
+  <p>The show view inner turbo frame</p>
+  <%= link_to 'Replace with orginal content', 'turbo_frames/new' %>
+<% end %>
+
+<%= turbo_frame_tag "other" do %>
+  <p>The show view other turbo frame</p>
+  <%= link_to 'Replace with orginal content', 'turbo_frames' %>
+<% end %>
