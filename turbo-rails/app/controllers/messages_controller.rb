@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MessagesController < ApplicationController
   before_action :set_room, only: %i[new create]
 

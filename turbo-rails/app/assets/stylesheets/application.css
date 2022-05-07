@@ -14,7 +14,7 @@
  *= require_self
  */
 
- turbo-frame {
-     display: block;
-     border: 1px dashed blue;
- }
+turbo-frame {
+    display: block;
+    border: 1px dashed blue;
+}
