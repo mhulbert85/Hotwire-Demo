@@ -1,0 +1,51 @@
+<h1>TurboFrames#new</h1>
+<p>Find me in app/views/turbo_frames/new.html.erb</p>
+<%= turbo_frame_tag "my_turbo_frame" do %>
+  <p>This content is load from 
+    <pre>app/views/turbo_frames/new.html.erb</pre>
+  </p>
+<% end %>
+<!-- Mutliple Turbo Frames -->
+<%= turbo_frame_tag 'first' do %>
+  <div class="ratio ratio-1x1">
+    <h1>1</h1>
+  </div>
+<% end %>
+<%= turbo_frame_tag 'second' do %>
+  <div class="ratio ratio-1x1">
+    <h1>2</h1>
+  </div>
+<% end %>
+<%= turbo_frame_tag 'third' do %>
+  <div class="ratio ratio-1x1">
+    <h1>3</h1>
+  </div>
+<% end %>
+<%= turbo_frame_tag 'fourth' do %>
+  <div class="ratio ratio-1x1">
+    <h1>4</h1>
+  </div>
+<% end %>
+<%= turbo_frame_tag 'fifth' do %>
+  <div class="ratio ratio-1x1">
+    <h1>5</h1>
+  </div>
+<% end %>
+<%= turbo_frame_tag 'sixth' do %>
+  <div class="ratio ratio-1x1">
+    <h1>6</h1>
+  </div>
+<% end %>
+<!-- Render by Link -->
+<%= turbo_frame_tag 'link' do %>
+  <p>turbo frame rendered by link</p>
+<% end %>
+<!-- Render by Button -->
+<%= turbo_frame_tag 'button' do %>
+  <p>turbo frame rendered by button</p>
+<% end %>
+<!-- Render with back link -->
+<%= turbo_frame_tag 'back' do %>
+  <%= link_to 'Back', '/' %>
+  <p>turbo frame with back link</p>
+<% end %>
