@@ -13,7 +13,7 @@
   <div class="ratio ratio-1x1">
     <h1>1</h1>
   </div>
-  <%= link_to 'Frame 1 Child', 'turbo_frames/nested_frames/show', data: {turbo_frame: "frame_1_child"} %>
+  <%= link_to 'Frame 1 Child', 'nested_frames/show', data: {turbo_frame: "frame_1_child"} %>
   <%= turbo_frame_tag "frame_1_child" do %><%= tag.div class: "ratio ratio-1x1" %><% end %>
 <% end %>
 
@@ -21,7 +21,7 @@
   <div class="ratio ratio-1x1">
     <h1>2</h1>
   </div>
-  <%= link_to 'Frame 2 Child', 'turbo_frames/nested_frames/show', data: {turbo_frame: "frame_2_child"} %>
+  <%= link_to 'Frame 2 Child', 'nested_frames/show', data: {turbo_frame: "frame_2_child"} %>
   <%= turbo_frame_tag "frame_2_child" do %><%= tag.div class: "ratio ratio-1x1" %><% end %>
 <% end %>
 
@@ -29,7 +29,7 @@
   <div class="ratio ratio-1x1">
     <h1>3</h1>
   </div>
-  <%= link_to 'Frame 3 Child', 'turbo_frames/nested_frames/show', data: {turbo_frame: "frame_3_child"} %>
+  <%= link_to 'Frame 3 Child', 'nested_frames/show', data: {turbo_frame: "frame_3_child"} %>
   <%= turbo_frame_tag "frame_3_child" do %><%= tag.div class: "ratio ratio-1x1" %><% end %>
 <% end %>
 
@@ -37,6 +37,6 @@
   <div class="ratio ratio-1x1">
     <h1>4</h1>
   </div>
-  <%= link_to 'Frame 4 Child', 'turbo_frames/nested_frames/show', data: {turbo_frame: "frame_4_child"} %>
+  <%= link_to 'Frame 4 Child', 'nested_frames/show', data: {turbo_frame: "frame_4_child"} %>
   <%= turbo_frame_tag "frame_4_child" do %><%= tag.div class: "ratio ratio-1x1" %><% end %>
 <% end %>
