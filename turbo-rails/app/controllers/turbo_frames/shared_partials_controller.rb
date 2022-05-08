@@ -5,8 +5,7 @@ class TurboFrames::SharedPartialsController < ApplicationController
   def new
     render partial: params[:partial],
            locals: params[:locals],
-           as: params[:as],
-           object: params[:object]
+           as: params[:as]
   end
 
   def index; end
