@@ -1,6 +1,6 @@
 <%= turbo_frame_tag "outer" do %>
   <p>New view outer turbo frame</p>
-  <%= link_to 'Replace with index view contents', root_path %>
+  <%= link_to 'Replace with index view contents', turbo_frames_nested_frames_path %>
   <%= turbo_frame_tag "inner" do %>
     <p>New view inner turbo frame</p>
     <%= link_to 'Render by id inner', turbo_frames_nested_frame_path(id: 'some_id') %>
