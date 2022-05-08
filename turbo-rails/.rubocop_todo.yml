@@ -37,6 +37,9 @@ Style/IfUnlessModifier:
   Exclude:
     - 'bin/bundle'
 
+Style/ClassAndModuleChildren:
+   Enabled: false
+
 # Offense count: 1
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns, IgnoredPatterns.
