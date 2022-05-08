@@ -1,0 +1,36 @@
+<h1>Turbo Frame Examples</h1>
+<br>
+<div class="row">
+  <div class="col-4">
+    <div class="card ratio ratio-1x1">
+      <div class="card-body p-4">
+        <h3 class="card-title">Hotwire Demo</h3>
+        <p class="card-text">Code from the Demo video at <a href="https://hotwire.dev">hotwire</a></p>
+        <%= link_to "Hotwire Demo", rooms_path %>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card ratio ratio-1x1">
+      <div class="card-body p-4">
+        <h3 class="card-title">Simple Frames</h3>
+        <p class="card-text">Basic usage of turbo frames</p>
+        <%= link_to "Simple Frames", turbo_frames_simple_frames_path %>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card ratio ratio-1x1">
+      <div class="card-body p-4">
+        <h3 class="card-title">Nested Frames</h3>
+        <p class="card-text">Turbo frames with in turbo frames</p>
+        <%= link_to "Nested Frames", turbo_frames_nested_frames_path %>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<h4>Turbo Frames are represented in the UI by a purple dashed border, see example below</h4>
+<%= turbo_frame_tag "this_is_a_turbo_frame" do %>
+  <p>This is a turbo frame</p>
+<% end %>

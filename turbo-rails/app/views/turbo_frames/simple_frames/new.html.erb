@@ -1,9 +1,7 @@
 <h1>TurboFrames#new</h1>
 <p>Find me in app/views/turbo_frames/new.html.erb</p>
 <%= turbo_frame_tag "my_turbo_frame" do %>
-  <p>This content is load from 
-    <pre>app/views/turbo_frames/new.html.erb</pre>
-  </p>
+  <p>This content is loaded from <code>app/views/turbo_frames/new.html.erb</code></p>
 <% end %>
 <!-- Mutliple Turbo Frames -->
 <%= turbo_frame_tag 'first' do %>
@@ -46,7 +44,7 @@
 <% end %>
 <!-- Render with back link -->
 <%= turbo_frame_tag 'back' do %>
-  <%= link_to 'Back', '/' %>
+  <%= link_to 'Back', turbo_frames_simple_frames_path %>
   <p>turbo frame with back link</p>
 <% end %>
 <!-- Render from the putside -->
