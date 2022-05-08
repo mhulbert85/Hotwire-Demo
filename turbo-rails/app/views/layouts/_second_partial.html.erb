@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "second_partial_turbo_frame" do %>
+  <%= turbo_frame_tag 'first_partial_turbo_frame' do %>
+    <%= tag.p "Second Partial" %>
+    <%= link_to 'show first partial', new_turbo_frames_shared_partial_path(partial: 'layouts/first_partial') %>
+  <% end %>
+<% end %>
