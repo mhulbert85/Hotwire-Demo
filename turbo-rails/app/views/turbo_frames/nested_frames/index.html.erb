@@ -1,0 +1,21 @@
+<h1 class="mb-5">Nested Turbo Frame Examples</h1>
+<h3>Render nested turbo frames</h3>
+<%= turbo_frame_tag "outer", src: new_turbo_frames_nested_frame_path do %>
+  <p>Index view contents</p>
+  <%= link_to 'Render by id outer', new_turbo_frames_nested_frame_path %>
+<% end %>
+<br>
+<h3>Render nested turbo frames from the outside</h3>
+<nav class="d-flex gap-3">
+  <%= link_to 'Frame 1', new_turbo_frames_nested_frame_path, data: {turbo_frame: "frame_1"}, class:"nav-link w-25 p-0" %>
+  <%= link_to 'Frame 2', new_turbo_frames_nested_frame_path, data: {turbo_frame: "frame_2"}, class:"nav-link w-25 p-0" %>
+  <%= link_to 'Frame 3', new_turbo_frames_nested_frame_path, data: {turbo_frame: "frame_3"}, class:"nav-link w-25 p-0" %>
+  <%= link_to 'Frame 4', new_turbo_frames_nested_frame_path, data: {turbo_frame: "frame_4"}, class:"nav-link w-25 p-0" %>
+</nav>
+<div class="d-flex gap-3">
+  <%= turbo_frame_tag "frame_1", class: "w-25" do %><%= tag.div class: "ratio ratio-1x1" %><% end %>
+  <%= turbo_frame_tag "frame_2", class: "w-25" %>
+  <%= turbo_frame_tag "frame_3", class: "w-25" %>
+  <%= turbo_frame_tag "frame_4", class: "w-25" %>
+</div>
+<br>

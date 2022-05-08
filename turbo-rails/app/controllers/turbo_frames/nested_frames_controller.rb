@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class TurboFramesController < ApplicationController
+class TurboFrames::NestedFramesController < ApplicationController
   def index; end
 
   def new; end
