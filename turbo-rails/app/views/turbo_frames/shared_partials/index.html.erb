@@ -1,0 +1,27 @@
+<%= render partial: 'layouts/nav' %>
+
+<h1 class="mb-5">Partial as a Parameter</h1>
+
+<h3>Render turbo frame with a partial as parameter</h3>
+<%= turbo_frame_tag "first_partial_turbo_frame", src: new_turbo_frames_shared_partial_path(partial: 'layouts/first_partial') %>
+<br>
+<h3>Render nested turbo frame partial as parameter</h3>
+<%= turbo_frame_tag "second_partial_turbo_frame", src: new_turbo_frames_shared_partial_path(partial: 'layouts/second_partial')  %>
+<br>
+<h3>Render partial with locals from the outside</h3>
+<%= link_to 'First Message', 
+    new_turbo_frames_shared_partial_path( 
+        partial: 'with_locals', 
+        locals: { msg: 'This is the first message'}
+    ), 
+    data: { turbo_frame: 'with_locals' } 
+%>
+<%= link_to 'Second Message', 
+    new_turbo_frames_shared_partial_path( 
+        partial: 'with_locals', 
+        locals: { msg: 'This is the second message'}
+    ), 
+    data: { turbo_frame: 'with_locals' } 
+%>
+<%= turbo_frame_tag "with_locals" %>
+<br>
